@@ -1,1 +1,13 @@
-<h1 className="text-4xl font-bold text-blue-600">Tailwind is working!</h1>
+"use client";
+
+import { useState, useEffect } from "react";
+
+export default function HomePage() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+
+  }
+
+}
+
