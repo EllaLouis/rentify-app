@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "White Chair",
+        "price": 10,
+        "imageUrl": "https://images.unsplash.com/photo-1616627786065-39410768d8f2"
+    },
+    {
+        "id": 2,
+        "name": "Round Table",
+        "price": 15,
+        "imageUrl": "https://images.unsplash.com/photo-1607300560620-980dcd0df9fb"
+    },
+    {
+        "id": 3,
+        "name": "Party Lights",
+        "price": 8,
+        "imageUrl": "https://images.unsplash.com/photo-1604023486609-06dbb48672fc"
+    }
+]
