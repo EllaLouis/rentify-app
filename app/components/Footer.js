@@ -18,7 +18,7 @@ const Footer = () => {
                     <FaInstagram size={30} />
                     <FaTwitterSquare size={30} />
                     <FaGithubSquare size={30} />
-                    <FaDribbleSquare size={30} />
+                    <FaDribbbleSquare size={30} />
                 </div>
             </div>
             <div className='lg:col-span-3 flex justify-between'></div>
