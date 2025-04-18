@@ -1,60 +1,63 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 
 export default function HomePage() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/EllaLouis/rentify-app/refs/heads/master/app/items.json")
-      .then((res) => res.json())
+    fetch("https://raw.githubusercontent.com/EllaLouis/rentify-app/master/app/items.json")
+      .then((response) => response.json())
       .then((data) => setItems(data))
-      .catch((err) => console.error("Error fetching items:", err));
+      .catch((error) => console.error("Error fetching items:", error));
   }, []);
 
   return (
-    <main className="bg-[#f5f5dc] text-[#171717] min-h-screen">
-      <header className="bg-white shadow p-4">
-        <nav className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
-          <h1 className="text-xl font-bold">Rentify</h1>
-
-          <div className="flex flex-wrap items-center gap-6">
-            <Link href="/">Home</Link>
-            <Link href="/rental-items">Rental Items</Link>
-            <Link href="/about-us">About Us</Link>
-            <Link href="/contact-us">Contact Us</Link>
-          </div>
-
-          <input
-            type="text"
-            placeholder="Search..."
-            className="border border-gray-300 rounded-full px-4 py-1 focus:outline-none focus:ring"
-          />
-        </nav>
-
+    <div>
+      <header className="bg-[#d6bfa0] p-4 flex justify-between items-center shadow-md">
+        <div className="flex space-x-6 font-medium text-lg">
+          <a href="#" className="hover:underline">Home</a>
+          <a href="#" className="hover:underline">Rental Items</a>
+          <a href="#" className="hover:underline">About Us</a>
+          <a href="#" className="hover:underline">Contact Us</a>
+        </div>
+        <input
+          type="text"
+          placeholder="Search..."
+          className="rounded-full px-4 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        />
       </header>
 
-      <section className="p-6 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-semibold mb-4 text-center">Event Rentals</h2>
+      <main className="p-6">
+        <h1 className="text-3xl font-bold mb-6 text-center">Rentify Rentals</h1>
+        <h2 className="text-2xl font-bold mb-5">Rent the Perfect Event Supplies!</h2>
+        <p className="mb-4">
+          Rentify event rentals and entertainment, deal on varieties of unique rental items for any event.
+          We're ready to help you make your event an unforgettable one, with our wide range of high-quality rental items.
+          From chairs, tables, linens, decor and even lightings, we have everything you need to make your event a success.
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {items.map((item) => (
-            <div key={item.id} className="border p-4 rounded shadow text-center bg-white">
-              <img src={item.imageUrl} alt={item.name} className="w-full h-40 object-cover rounded mb-2" />
-              <h3 className="text-lg font-semibold">{item.name}</h3>
+            <div key={item.id} className="border p-4 rounded shadow text-center">
+              <img
+                src={item.imageUrl}
+                alt={item.name}
+                className="w-full h-40 object-cover rounded mb-2"
+              />
+              <h2 className="text-xl font-semibold">{item.name}</h2>
             </div>
           ))}
         </div>
-      </section>
+      </main>
 
       {/* Footer */}
-      <footer className="bg-white mt-10 p-4 text-center text-sm text-gray-600">
-        <div className="flex justify-center space-x-4 mb-2">
-          <a href="#" className="hover:text-black">Instagram</a>
-          <a href="#" className="hover:text-black">Facebook</a>
-          <a href="#" className="hover:text-black">Twitter</a>
+      <footer className="bg-[#d6bfa0] mt-10 p-6 text-center text-sm">
+        <div className="flex justify-center space-x-6 mb-2">
+          <a href="#" className="hover:text-blue-600">Facebook</a>
+          <a href="#" className="hover:text-blue-400">Twitter</a>
+          <a href="#" className="hover:text-pink-500">Instagram</a>
         </div>
         <p>&copy; {new Date().getFullYear()} Rentify. All rights reserved.</p>
       </footer>
-    </main>
+    </div>
   );
 }
