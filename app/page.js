@@ -35,7 +35,7 @@ export default function HomePage() {
           We're ready to help you make your event an unforgettable one, with our wide range of high-quality rental items.
           From chairs, tables, linens, decor and even lightings, we have everything you need to make your event a success.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="">
           {items.map((item) => (
             <div key={item.id} className="border p-4 rounded shadow text-center">
               <img
