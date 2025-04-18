@@ -16,8 +16,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main className="p-6">
-        <h1 className="text-3xl font-bold mb-6 text-center">Rentify Rentals</h1>
+      <main className="p-8">
         <h2 className="text-2xl font-bold mb-5">Rent the Perfect Event Supplies!</h2>
         <p className="mb-4">
           Rentify event rentals and entertainment, deal on varieties of unique rental items for any event.
