@@ -13,7 +13,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <header className="bg-[#d6bfa0] p-4 flex justify-between items-center shadow-md">
+      <header className="bg-[#d6bfa0] p-12 flex justify-between items-center shadow-md">
         <div className="flex space-x-6 font-medium text-lg">
           <a href="#" className="hover:underline">Home</a>
           <a href="#" className="hover:underline">Rental Items</a>
