@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main className="p-8">
+      <main className="p-8 text-white">
         <h2 className="text-2xl font-bold mb-5">Rent the Perfect Event Supplies!</h2>
         <p className="mb-4">
           Rentify event rentals and entertainment, deal on varieties of unique rental items for any event.
@@ -24,7 +24,7 @@ function App() {
           From chairs, tables, linens, decor and even lightings, we have everything you need to make your event a success.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="">
           {items.map((item) => (
             <div key={item.id} className="border p-4 rounded shadow text-center">
               <img
