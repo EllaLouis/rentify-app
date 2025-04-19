@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(80, 125, 185);
-  color: white;
+  background-color: burlywood;
+  color: rgb(37, 37, 37);
   font-family: var(--font-sans);
 }
