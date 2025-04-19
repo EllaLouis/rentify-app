@@ -1,17 +1,26 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Image from 'next/image';
 import Footer from "./components/Footer";
+import Image from "next/image";
 
-function App() {
+export default function HomePage() {
   const [items, setItems] = useState([]);
 
+  const UNSPLASH_ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
+
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/EllaLouis/rentify-app/master/app/items.json")
-      .then((response) => response.json())
-      .then((data) => setItems(data))
-      .catch((error) => console.error("Error fetching items:", error));
+    fetch(`https://api.unsplash.com/search/photos?query=event%20decor&client_id=M6p1WOrQB92znuXOOXOzENCqxcC6P8xx7mAvL2t458A`)
+      .then((res) => res.json())
+      .then((data) => {
+        const formattedData = data.results.map((item, index) => ({
+          id: index,
+          name: item.alt_description || "Rental Item",
+          imageUrl: item.urls.regular,
+        }));
+        setItems(formattedData);
+      })
+      .catch((err) => console.error("Failed to fetch from Unsplash:", err));
   }, []);
 
   return (
@@ -20,20 +29,20 @@ function App() {
       <main className="p-8 text-white">
         <h2 className="text-2xl font-bold mb-5">Rent the Perfect Event Supplies!</h2>
         <p className="mb-4">
-          Rentify event rentals and entertainment, deal on varieties of unique rental items for any event.
-          We&apos;re ready to help.
-          help you make your event an unforgettable one, with our wide range of high-quality rental items.
-          From chairs, tables, linens, decor and even lightings, we have everything you need to make your event a success.
+          Rentify event rentals and entertainment deals on unique rental items for any event.
+          We&apos;re ready to help you make your event unforgettable with our wide range of high-quality rental items—
+          from chairs and tables to linens, decor, and lighting.
         </p>
 
-        <div className="">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {items.map((item) => (
-            <div key={item.id} className="border p-4 rounded shadow text-center">
+            <div key={item.id} className="border p-4 rounded shadow text-center bg-white text-black">
               <Image
                 src={item.imageUrl}
                 alt={item.name}
                 width={400}
-                height={200}
+                height={250}
                 className="rounded mb-2 object-cover"
               />
               <h2 className="text-xl font-semibold">{item.name}</h2>
@@ -45,5 +54,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
