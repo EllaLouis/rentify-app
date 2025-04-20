@@ -4,12 +4,12 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <header className="bg-[#f5f5dc] text-black shadow">
+        <header className="bg-[#f5f5dc] text-black shadow w-full">
             <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 className="text-3xl font-bold">Rentify</h1>
+                <h1 className="text-3xl font-bold ">Rentify</h1>
 
-                <nav className="flex items-center gap-8">
-                    <ul className="flex gap-6">
+                <nav className="flex items-center gap-6">
+                    <ul className="flex gap-8 text-lg font-semibold">
                         <li className="hover:text-blue-500 transition">
                             <Link href="/">Home</Link>
                         </li>

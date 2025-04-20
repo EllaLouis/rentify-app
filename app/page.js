@@ -35,17 +35,14 @@ export default function HomePage() {
         </p>
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6 mt-6">
           {items.map((item) => (
-            <div key={item.id} className="border p-4 rounded shadow text-center bg-white text-black">
-              <Image
+            <div key={item.id} className="w-60 border rounded shadow bg-white p-2">
+              <img
                 src={item.imageUrl}
                 alt={item.name}
-                width={400}
-                height={250}
-                className="rounded mb-2 object-cover"
+                className="w-full h-32 object-cover rounded"
               />
-              <h2 className="text-xl font-semibold">{item.name}</h2>
             </div>
           ))}
         </div>
