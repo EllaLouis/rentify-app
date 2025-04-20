@@ -27,15 +27,17 @@ export default function HomePage() {
     <div>
       <Navbar />
       <main className="p-8 text-white">
-        <h2 className="text-2xl font-bold mb-5">Rent the Perfect Event Supplies!</h2>
-        <p className="mb-4">
-          Rentify event rentals and entertainment deals on unique rental items for any event.
-          We&apos;re ready to help you make your event unforgettable with our wide range of high-quality rental items—
-          from chairs and tables to linens, decor, and lighting.
-        </p>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-5">Rent the Perfect Event Supplies!</h2>
+          <p className="mb-4">
+            Rentify event rentals and entertainment deals on unique rental items for any event. <br />
+            We&apos;re ready to help you make your event unforgettable with our wide range of <br /> high-quality rental items—
+            from chairs and tables to linens, decor, and lighting.
+          </p>
+        </div>
 
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* Grid with 2 items per row */}
+        <div className="max-w-7xl mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {items.map((item) => (
             <div key={item.id} className="border p-4 rounded shadow text-center bg-white text-black">
               <Image
