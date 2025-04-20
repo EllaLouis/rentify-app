@@ -36,7 +36,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Grid with 2 items per row */}
+      
         <div className="max-w-7xl mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {items.map((item) => (
             <div key={item.id} className="border p-4 rounded shadow text-center bg-white text-black">
