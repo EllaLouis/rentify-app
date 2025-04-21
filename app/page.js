@@ -36,13 +36,13 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="max-w-7xl mx-auto mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {items.map((item) => (
-            <div key={item.id} className="w-60 border rounded shadow bg-white p-2">
+            <div key={item.id} className="w-48 border rounded shadow bg-white p-2">
               <img
                 src={item.imageUrl}
                 alt={item.name}
-                className="w-full h-32 object-cover rounded"
+                className="w-full h-28 object-cover rounded"
               />
             </div>
           ))}
