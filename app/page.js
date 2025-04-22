@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {items.map((item) => (
             <div key={item.id} className="flex justify-center">
-              <div className="w-24 aspect-square border-2 border-gray-300 rounded shadow bg-white overflow-hidden">
+              <div className="w-24 aspect-square border-2 border-white rounded shadow bg-white overflow-hidden">
                 <img
                   src={item.imageUrl}
                   alt={item.name}

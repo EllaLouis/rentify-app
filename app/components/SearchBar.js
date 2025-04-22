@@ -28,13 +28,13 @@ const SearchBar = () => {
                     placeholder="Search..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="flex-grow bg-transparent px-2 py-1 text-black text-sm outline-none"
+                    className="flex-grow bg-transparent px-2 py-1 text-black outline-none rounded-full"
                 />
                 <button
                     onClick={handleSearch}
                     className="bg-blue-600 text-white px-4 py-1 rounded-full hover:bg-blue-700 transition"
                 >
-                    Search
+                    Go
                 </button>
             </div>
             {message && (
