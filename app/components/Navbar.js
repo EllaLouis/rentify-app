@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import SearchBar from "./components/SearchBar";
 
 const Navbar = () => {
     return (
@@ -33,19 +34,8 @@ const Navbar = () => {
 
                 </nav>
 
-                {/* Right: Search Bar */}
-                <div className="flex-1 flex justify-end pr-2">
-                    <div className="flex items-center bg-white rounded-full px-2 py-1 w-full max-w-xs shadow-md">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="flex-grow bg-transparent px-2 py-1 text-black outline-none"
-                        />
-                        <button className="bg-blue-600 text-white px-4 py-1 rounded-full hover:bg-blue-700 transition mr-2">
-                            Search
-                        </button>
-                    </div>
-                </div>
+                <SearchBar />
+
             </div>
         </header>
     );

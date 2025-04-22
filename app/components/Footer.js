@@ -1,33 +1,44 @@
-import React from 'react'
 import {
-    FaDribbbleSquare,
-    FaEnvelopeSquare,
     FaFacebookSquare,
-    FaGithubSquare,
     FaInstagram,
-    FaTelegram,
-    FaTelegramPlane,
     FaTwitterSquare,
-} from 'react-icons/fa';
+    FaTelegramPlane,
+    FaEnvelopeSquare,
+} from "react-icons/fa";
 
-const Footer = () => {
+export default function Footer() {
     return (
-        <div className='max-w-[120px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
-            <div className='text-left'>
-                <h1 className='w-full text-3xl italic fon-bold text-white'>Rentify</h1>
-                <p className='text-sm italic py-4'>Rentify event rentals</p>
-                <p className="text-sm italic">Have questions? Reach out to us at:</p>
-                <div className='flex justify-between md:w-[80%] my-8'>
-                    <FaFacebookSquare size={36} />
-                    <FaInstagram size={36} />
-                    <FaTwitterSquare size={36} />
-                    <FaTelegramPlane size={36} />
-                    <FaEnvelopeSquare size={36} />
+        <div className="bg-beige text-gray-300 px-6 py-10">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h1 className="text-3xl italic font-bold text-white">Rentify</h1>
+                    <p className="text-sm italic py-2">Rentify event rentals</p>
+                    <p className="text-sm italic">Have questions? Reach out to us at:</p>
+
+                    {/* Social Icons with links */}
+                    <div className="flex space-x-8 mt-6 text-inherit">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <FaFacebookSquare size={32} />
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram size={32} />
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                            <FaTwitterSquare size={32} />
+                        </a>
+                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+                            <FaTelegramPlane size={32} />
+                        </a>
+                        <a href="mailto:info@rentify.com">
+                            <FaEnvelopeSquare size={32} />
+                        </a>
+                    </div>
+
+                    <p className="text-xs italic text-gray-400 mt-6">
+                        &copy; Rentify. All rights reserved.
+                    </p>
                 </div>
             </div>
-            <div className='lg:col-span-3 flex justify-between'></div>
         </div>
-    )
+    );
 }
-
-export default Footer
