@@ -34,7 +34,7 @@ const Navbar = () => {
                 </nav>
 
                 {/* Right: Search Bar */}
-                <div className="flex-1 flex justify-end pr-4">
+                <div className="flex-1 flex justify-end pr-2">
                     <div className="flex items-center bg-white rounded-full px-2 py-1 w-full max-w-xs shadow-md">
                         <input
                             type="text"
