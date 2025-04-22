@@ -1,9 +1,12 @@
 import React from 'react'
 import {
     FaDribbbleSquare,
+    FaEnvelopeSquare,
     FaFacebookSquare,
     FaGithubSquare,
     FaInstagram,
+    FaTelegram,
+    FaTelegramPlane,
     FaTwitterSquare,
 } from 'react-icons/fa';
 
@@ -13,12 +16,13 @@ const Footer = () => {
             <div>
                 <h1 className='w-full text-3xl fon-bold text-white'>Rentify</h1>
                 <p className='py-4'>Rentify event rentals</p>
-                <div className='flex justify-between md:w-[75%] my-6'>
-                    <FaFacebookSquare size={30} />
-                    <FaInstagram size={30} />
-                    <FaTwitterSquare size={30} />
-                    <FaGithubSquare size={30} />
-                    <FaDribbbleSquare size={30} />
+                <p className="text-sm">Have questions? Reach out to us at:</p>
+                <div className='flex justify-between md:w-[80%] my-8'>
+                    <FaFacebookSquare size={36} />
+                    <FaInstagram size={36} />
+                    <FaTwitterSquare size={36} />
+                    <FaTelegramPlane size={36} />
+                    <FaEnvelopeSquare size={36} />
                 </div>
             </div>
             <div className='lg:col-span-3 flex justify-between'></div>

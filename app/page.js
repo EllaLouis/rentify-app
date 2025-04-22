@@ -10,7 +10,12 @@ export default function HomePage() {
   const UNSPLASH_ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 
   useEffect(() => {
-    fetch(`https://api.unsplash.com/search/photos?query=event%20decor&client_id=${UNSPLASH_ACCESS_KEY}`)
+
+    Promise.all([
+      fetch(`https://api.unsplash.com/search/photos?query=event%20chairs&per_page=4&client_id=${UNSPLASH_ACCESS_KEY}`),
+      fetch(`https://api.unsplash.com/search/photos?query=event%20tables&per_page=4&client_id=${UNSPLASH_ACCESS_KEY}`),
+      fetch(`https://api.unsplash.com/search/photos?query=event%20decor&per_page=4&client_id=${UNSPLASH_ACCESS_KEY}`)
+    ])
       .then((res) => res.json())
       .then((data) => {
         const formattedData = data.results.map((item, index) => ({
