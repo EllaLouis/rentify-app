@@ -31,7 +31,7 @@ export default function HomePage() {
     <div>
       <Navbar />
       <main className="p-8 text-white">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-left">
           <h2 className="text-2xl italic font-bold mb-5">Rent the Perfect Event Supplies!</h2>
           <p className="mb-4 text italic">
             Rentify event rentals and entertainment deals on unique rental items for any event. <br />
@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {items.map((item) => (
             <div key={item.id} className="flex justify-center">
-              <div className="w-32 h-32 border rounded shadow bg-white overflow-hidden">
+              <div className="w-28 aspect-square border rounded shadow bg-white overflow-hidden">
                 <img
                   src={item.imageUrl}
                   alt={item.name}
