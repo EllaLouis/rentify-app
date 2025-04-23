@@ -39,7 +39,7 @@ export default function ContactPage() {
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-100 border border-gray-300 rounded px-3 py-2"
+                                className="w-[24rem] border border-gray-300 rounded px-3 py-2"
                             />
                         </div>
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-100 border border-gray-300 rounded px-3 py-2"
+                                className="w-[24rem] border border-gray-300 rounded px-3 py-2"
                             />
                         </div>
 
@@ -63,7 +63,7 @@ export default function ContactPage() {
                                 required
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-100 border border-gray-300 rounded px-3 py-2"
+                                className="w-[24rem] border border-gray-300 rounded px-3 py-2"
                             />
                         </div>
 

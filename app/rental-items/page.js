@@ -45,7 +45,7 @@ export default function RentalItemsPage() {
                                     <p className="text-gray-700 mt-1">Price: ${item.price} per unit</p>
                                 </div>
                                 <div className="mt-2 sm:mt-0">
-                                    <label className="block text-sm italic mb-1">Quantity:</label>
+                                    <label className="block text-sm italicl mb-1">Quantity:</label>
                                     <input
                                         type="number"
                                         min="0"
