@@ -28,18 +28,22 @@ export default function AboutUsPage() {
             <main className="p-8 text-white">
                 <h1 className="text-3xl font-bold mb-4">About Us</h1>
                 <p className="mb-6 max-w-3xl">
-                    Welcome to Rentify! We specialize in providing high-quality event rental items to help you create unforgettable occasions.
+                    Welcome to Rentify! We specialize in providing high-quality event rental items to help you create unforgettable occasions.<br />
+                    Our mission is to make your event planning process as seamless and enjoyable as possible. <br />
                     Whether you're planning a wedding, corporate event, or birthday party, we've got you covered with tables, chairs, linens, decor, and more.
                 </p>
-
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-6xl">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-6xl mx-auto">
                     {images.map((img) => (
-                        <img
+                        <div
                             key={img.id}
-                            src={img.url}
-                            alt={img.alt}
-                            className="w-full h-32 object-cover rounded shadow"
-                        />
+                            className="border-4 border-white rounded-lg overflow-hidden shadow-lg"
+                        >
+                            <img
+                                src={img.url}
+                                alt={img.alt_description || "About Us"}
+                                className="w-full h-48 object-cover"
+                            />
+                        </div>
                     ))}
                 </div>
             </main>
