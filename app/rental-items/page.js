@@ -32,7 +32,7 @@ export default function RentalItemsPage() {
             <Navbar />
             <main className="p-6 bg-white min-h-screen text-black">
                 <div className="max-w-2xl mx-auto">
-                    <h1 className="text-3xl font-bold mb-6 text-left">Available Rental Items</h1>
+                    <h1 className="text-3xl italic font-bold mb-6 text-left">Available Rental Items</h1>
 
                     <div className="space-y-4">
                         {rentalItems.map((item) => (
@@ -41,11 +41,11 @@ export default function RentalItemsPage() {
                                 className="border rounded-lg p-4 shadow bg-gray-50 flex flex-col sm:flex-row sm:justify-between sm:items-center"
                             >
                                 <div>
-                                    <h2 className="text-xl font-semibold">{item.name}</h2>
+                                    <h2 className="text-xl italic font-semibold">{item.name}</h2>
                                     <p className="text-gray-700 mt-1">Price: ${item.price} per unit</p>
                                 </div>
                                 <div className="mt-2 sm:mt-0">
-                                    <label className="block text-sm mb-1">Quantity:</label>
+                                    <label className="block text-sm italic mb-1">Quantity:</label>
                                     <input
                                         type="number"
                                         min="0"
