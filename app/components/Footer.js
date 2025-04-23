@@ -16,23 +16,24 @@ export default function Footer() {
                     <p className="text-sm italic">Have questions? Reach out to us at:</p>
 
                     {/* Social Icons with links */}
-                    <div className="flex space-x-8 mt-6 text-black">
+                    <div className="flex space-x-8 mt-6">
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <FaFacebookSquare size={32} className="text-black hover:text-blue-600 transition" />
+                            <FaFacebookSquare size={32} style={{ color: "black" }} />
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram size={32} className="text-black hover:text-blue-600 transition" />
+                            <FaInstagram size={32} style={{ color: "black" }} />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <FaTwitterSquare size={32} className="text-black hover:text-blue-600 transition" />
+                            <FaTwitterSquare size={32} style={{ color: "black" }} />
                         </a>
                         <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
-                            <FaTelegramPlane size={32} className="text-black hover:text-blue-600 transition" />
+                            <FaTelegramPlane size={32} style={{ color: "black" }} />
                         </a>
                         <a href="mailto:info@rentify.com">
-                            <FaEnvelopeSquare size={32} className="text-black hover:text-blue-600 transition" />
+                            <FaEnvelopeSquare size={32} style={{ color: "black" }} />
                         </a>
                     </div>
+
 
 
                     <p className="text-xs italic text-gray-400 mt-6">
