@@ -17,16 +17,16 @@ export default function Footer() {
 
                     {/* Social Icons with links */}
                     <div className="flex space-x-8 mt-6 text-inherit">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://facebook.com" target="_blank" color=" black" rel="noopener noreferrer">
                             <FaFacebookSquare size={32} />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://instagram.com" target="_blank" color="black" rel="noopener noreferrer">
                             <FaInstagram size={32} />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com" target="_blank" color="black" rel="noopener noreferrer">
                             <FaTwitterSquare size={32} />
                         </a>
-                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+                        <a href="https://telegram.org" target="_blank" color="black" rel="noopener noreferrer">
                             <FaTelegramPlane size={32} />
                         </a>
                         <a href="mailto:info@rentify.com">
