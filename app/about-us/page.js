@@ -30,7 +30,7 @@ export default function AboutUsPage() {
                 <p className="mb-6 max-w-3xl italic">
                     Welcome to Rentify! We specialize in providing high-quality event rental items to help you create unforgettable occasions.<br />
                     Our mission is to make your event planning process as seamless and enjoyable as possible. <br />
-                    Whether you're planning a wedding, corporate event, or birthday party, we've got you covered with tables, chairs, linens, decor, and more.
+                    Whether you are planning a wedding, corporate event, or birthday party, we got you covered with tables, chairs, linens, decor, and more.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-6xl mx-auto">
                     {images.map((img) => (
