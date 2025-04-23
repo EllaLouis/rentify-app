@@ -8,7 +8,7 @@ const Navbar = () => {
         <header className="bg-[#f5f5dc] text-black shadow ">
             <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
 
-                <h1 className=" text-[52px] font-bold ">Rentify</h1>
+                <h1 className=" text-[52px] italic font-bold ">Rentify</h1>
 
                 {/* Center: Nav Links */}
                 <nav className="flex-1">

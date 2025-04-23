@@ -9,7 +9,7 @@ export default function AboutUsPage() {
     const UNSPLASH_ACCESS_KEY = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY;
 
     useEffect(() => {
-        fetch(`https://api.unsplash.com/search/photos?query=event%20rentals&per_page=4&client_id=${UNSPLASH_ACCESS_KEY}`)
+        fetch(`https://api.unsplash.com/search/photos?query=wedding%20decor&per_page=4&client_id=${UNSPLASH_ACCESS_KEY}`)
             .then((res) => res.json())
             .then((data) => {
                 const formatted = data.results.map((item, index) => ({
@@ -26,8 +26,8 @@ export default function AboutUsPage() {
         <div>
             <Navbar />
             <main className="p-8 text-white">
-                <h1 className="text-3xl font-bold mb-4">About Us</h1>
-                <p className="mb-6 max-w-3xl">
+                <h1 className="text-3xl italic font-bold mb-4">About Us</h1>
+                <p className="mb-6 max-w-3xl italic">
                     Welcome to Rentify! We specialize in providing high-quality event rental items to help you create unforgettable occasions.<br />
                     Our mission is to make your event planning process as seamless and enjoyable as possible. <br />
                     Whether you're planning a wedding, corporate event, or birthday party, we've got you covered with tables, chairs, linens, decor, and more.
@@ -36,16 +36,17 @@ export default function AboutUsPage() {
                     {images.map((img) => (
                         <div
                             key={img.id}
-                            className="border-4 border-white rounded-lg overflow-hidden shadow-lg"
+                            className="aspect-square border-4 border-white rounded-lg overflow-hidden shadow-lg"
                         >
                             <img
                                 src={img.url}
                                 alt={img.alt_description || "About Us"}
-                                className="w-full h-48 object-cover"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     ))}
                 </div>
+
             </main>
             <Footer />
         </div>
